@@ -10,6 +10,7 @@ package jk.mybatis.generator;
  */
 public class TestGit {
     public static void main(String[] args) {
+		//测试命令提交
         System.out.println("Hello Git!");
     }
 }
