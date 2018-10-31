@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jk.mybatis.simple.mapper.SysUserRoleMapper">
+  <resultMap id="BaseResultMap" type="jk.mybatis.simple.model.SysUserRole">
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+  </resultMap>
+  <insert id="insert" parameterType="jk.mybatis.simple.model.SysUserRole">
+    insert into sys_user_role (user_id, role_id)
+    values (#{userId,jdbcType=INTEGER}, #{roleId,jdbcType=INTEGER})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select user_id, role_id
+    from sys_user_role
+  </select>
+</mapper>
